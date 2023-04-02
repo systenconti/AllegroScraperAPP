@@ -1,3 +1,5 @@
 .venv
 credentials.py
 geckodriver.log
+karmy.png
+__pycache__

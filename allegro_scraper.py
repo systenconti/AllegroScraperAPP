@@ -34,3 +34,4 @@ sleep(4)
 browser.save_full_page_screenshot("karmy.png")
 
 send_email()
+print("Email was sent")
