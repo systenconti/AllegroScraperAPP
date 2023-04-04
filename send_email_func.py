@@ -3,6 +3,8 @@ import ssl
 from credentials import username, password
 from email.message import EmailMessage
 
+with open("offers.txt", "r", encoding="UTF-8") as file:
+    content = file.read()
 
 def send_email():
     host = "smtp.gmail.com"
@@ -16,7 +18,7 @@ def send_email():
     # family = the list of all recipients' email addresses
     msg['From'] = username
     msg['To'] = "xiheartmakeup@gmail.com"
-    msg.set_content('Lista karmy Alpha Spirit od najtańszych poniżej')
+    msg.set_content(f'Lista karmy Alpha Spirit od najtańszych poniżej\n {content}')
 
     with open("karmy.png", "rb") as img:
         img_data = img.read()
